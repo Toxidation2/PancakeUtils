@@ -1,2 +1,3 @@
+# 🥞 🧰 
 # PancakeUtils
-open source GNU coreutils alternative. not a copy/fork.
+GNU coreutils alternative. Not a fork.
