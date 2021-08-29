@@ -1,5 +1,5 @@
-# 🥞 🧰 
-# PancakeUtils
+
+# PancakeUtils 🥞 🧰 
 GNU coreutils alternative. Not a fork.
 ## Why?
 To hopefully improve the user-friendliness of the GNU utilities.
