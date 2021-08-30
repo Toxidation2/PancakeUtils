@@ -18,10 +18,12 @@ int main(int argc, char* argv[])
     /* Sadly, we need to use an if/else ladder. */
     if(strcmp(fileName, "-h") == 0)
     {
-    printf("Opened help\n");
+    printf("pnt from PancakeUtils\n");
+    printf("\n");
+    printf("-h		Opens this help menu")
     exit(0);
     }
-    
+  
     }
     char const* const fileName = argv[1];
     FILE* file = fopen(fileName, "r"); 
