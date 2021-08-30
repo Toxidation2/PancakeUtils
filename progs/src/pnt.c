@@ -2,40 +2,36 @@
 //2021, the PancakeUtils team
 
 #include <stdio.h>
-#include <stdlib.h> // For exit()  
+#include <stdlib.h> // For exit() 
+#include <string.h> //For cmd-line arguments
+int main(int argc, char* argv[])
+{ 
+    int linecnt=0;
+    if(argc==1)
+    {
+    printf("pnt: No input files! Please specify at least one. For help, type -h.");
+    exit(0);
+    }
+    if(argc==2)
+    {
+    char const* const fileName = argv[1]; 
+    /* Sadly, we need to use an if/else ladder. */
+    if(strcmp(fileName, "-h") == 0)
+    {
+    printf("Opened help\n");
+    exit(0);
+    }
+    
+    }
+    char const* const fileName = argv[1];
+    FILE* file = fopen(fileName, "r"); 
+    char line[256];
 
-int main(int args, char** argi)
-{
-	int tempcnt; //We will use this later to count command line arguments.
-    	FILE *input;
-	char filename[100], c;
-	if (args==1) //Check for command line arguments
-    	{
-        	printf("pnt: No input files! Please specify at least one. For help, type -h.");
-        	exit(0);
-    	}
-  	if (args>=2)
-	{
-	for(tempcnt=1;tempcnt<args;tempcnt++) 
-	   	input = fopen(argi[tempcnt], "r");
-		 c = fgetc(input);
-         while (c != EOF)
-        {       
-              printf ("%c", c);
-              c = fgetc(input);
-        }
+   while (fgets(line, sizeof(line), file)) {
+	   linecnt++;
+	   printf("%d: %s",linecnt, line); 
+    }
+    fclose(file);
 
-        fclose(input);
-	}
-    	// Read contents from file
-    	c = fgetc(input);
-    	while (c != EOF)
-    	{
-        	printf ("%c", c);
-        	c = fgetc(input);
-    	}
-  
-    	fclose(input);
-    	return 0;
+    return 0;
 }
-
