@@ -1,6 +1,5 @@
 //pnt - a lightweight and powerful GNU 'cat' replacement
 //2021, the PancakeUtils team
-
 #include <stdio.h>
 #include <stdlib.h> // For exit() 
 #include <string.h> //For cmd-line arguments
