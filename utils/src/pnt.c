@@ -29,17 +29,15 @@ int main(int argc, char* argv[])
     {
     numlines = 1;
     }
-    
-  
     }
     
     if(argc == 2)
     {
     char const* const fileName = argv[1];
-        FILE* file = fopen(fileName, "r");
+    FILE* file = fopen(fileName, "r");
     char line[256];
 
-   while (fgets(line, sizeof(line), file)) {
+	while (fgets(line, sizeof(line), file)) {
            linecnt++;
            if(numlines == 1)
            {
@@ -49,7 +47,7 @@ int main(int argc, char* argv[])
            {
            printf("%s", line);
            }
-    }
+	}
     fclose(file);
 
     return 0;
@@ -58,10 +56,10 @@ int main(int argc, char* argv[])
     {
     char const* const fileName = argv[1];
     if( access( fileName, F_OK ) == 0 ) {
-     FILE* file = fopen(fileName, "r");
+    FILE* file = fopen(fileName, "r");
     char line[256];
 
-   while (fgets(line, sizeof(line), file)) {
+	while (fgets(line, sizeof(line), file)) {
            linecnt++;
            if(numlines == 1)
            {
@@ -71,31 +69,30 @@ int main(int argc, char* argv[])
            {
            printf("%s", line);
            }
-   }
-   fclose(file);
+	}
+    fclose(file);
 
-   return 0;
+    return 0;
     } else {
     char const* const fileName = argv[2];
     if( access( fileName, F_OK ) == 0 ) {
-     FILE* file = fopen(fileName, "r");
+    FILE* file = fopen(fileName, "r");
     char line[256];
 
-   while (fgets(line, sizeof(line), file)) {
+	while (fgets(line, sizeof(line), file)) {
            linecnt++;
            if(numlines == 1)
-           {
-           
+           {   
 	   printf("%d: %s",linecnt, line);
            }
 	   else
 	   {           
            printf("%s", line);
            }
-   }
-   fclose(file);
+	}
+    fclose(file);
 
-   return 0;
+    return 0;
     printf("File not found. %s \n", fileName);
     return 1;
     }
