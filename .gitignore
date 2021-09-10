@@ -1,2 +1,4 @@
 utils/src/test
 utils/src/a.out
+utils/bin/*
+utils/bin/*.*
