@@ -19,8 +19,8 @@ true: utils/src/true.c
 	@echo "true OK"
 
 repeat: utils/src/repeat.c
-	@echo "WARNING: This program does not work yet!"
-	@echo "Attempting to build repeat"
+	@echo "Building repeat"
 	cc -c utils/src/repeat.c -o utils/bin/repeat.o
 	cc -o utils/bin/repeat utils/bin/repeat.o
-	@echo "repeat semi-OK"
+	@echo "repeat OK"
+	@echo "WARNING: This program does not work yet!"
