@@ -1,6 +1,5 @@
-all-usable: pnt fail true
-
-all-unusable: repeat
+all: 
+	pnt fail true repeat
 
 pnt: utils/src/pnt.c
 	mkdir -p utils/bin
