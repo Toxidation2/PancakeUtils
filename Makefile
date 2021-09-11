@@ -1,6 +1,4 @@
-all-usable: pnt fail true
-
-all-unusable: repeat
+all: pnt fail true repeat
 
 pnt: utils/src/pnt.c
 	mkdir -p utils/bin
@@ -26,4 +24,3 @@ repeat: utils/src/repeat.c
 	cc -c utils/src/repeat.c -o utils/bin/repeat.o
 	cc -o utils/bin/repeat utils/bin/repeat.o
 	@echo "repeat OK"
-	@echo "WARNING: This program, repeat does not work yet!"
