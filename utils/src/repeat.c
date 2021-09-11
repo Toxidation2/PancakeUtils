@@ -19,4 +19,5 @@ int main(int argc, char* argv[]) {
             printf("%s ", a);
         }
     }
+    return 0;
 }
